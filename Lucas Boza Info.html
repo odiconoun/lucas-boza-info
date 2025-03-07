@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            const text = `Lucas Boza\n19.606.671-3\nBanco de Chile\nCuenta Corriente\n00-234-01339-07\nlucasbozarodriguez17@gmail.com`;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Información copiada al portapapeles");
+            }).catch(err => {
+                console.error("Error al copiar", err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Datos de transferencia</h2>
+        <p><strong>Lucas Boza</strong></p>
+        <p>19.606.671-3</p>
+        <p><strong>Banco de Chile</strong></p>
+        <p>Cuenta Corriente: 00-234-01339-07</p>
+        <p><strong>Email:</strong> lucasbozarodriguez17@gmail.com</p>
+        <button onclick="copyToClipboard()">Copiar Información</button>
+    </div>
+</body>
+</html>
